@@ -1,5 +1,13 @@
 #!/bin/bash
+############
+#About: this script will automate the user access in gut repo
+#author: shyam
+#Date: 03-05-2024
+#Version: v1
 
+############
+
+help()
 # GitHub API URL
 API_URL="https://api.github.com"
 
@@ -35,6 +43,13 @@ function list_users_with_read_access {
         echo "$collaborators"
     fi
 }
+
+function helper{
+  expected_cmd_args=2
+    if [ $# -ne $expected_cmd_args]; then
+     echo "print please excecute the script with required args"
+      echo "asd"
+     }
 
 # Main script
 
